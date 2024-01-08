@@ -1,0 +1,15 @@
+ <!-- <div class="product">
+
+                    <div class="img">
+                        <img src="./assets/images/e-stores-icon-ksiazki.jpg" alt="img">
+                    </div>
+
+                    <div class="info">
+                        <h3>Title</h3>                    
+                        <h4> category </h4>
+                        <p>Apout</p>       
+                        
+                        <h4> Price  </h4> 
+                        <h5>rate</h5>
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </div>    -->

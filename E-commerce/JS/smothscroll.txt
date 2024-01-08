@@ -1,0 +1,13 @@
+// -----------
+// Smooth Scroll
+// -----------
+// const scrollLinks = [...document.querySelectorAll('.scroll')];
+// scrollLinks.forEach((link) => {
+//   link.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const section = document.querySelector(e.target.hash);
+//     section.scrollIntoView({
+//       behavior: 'smooth'
+//     });
+//   })
+// });
