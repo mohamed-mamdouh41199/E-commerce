@@ -23,11 +23,11 @@
                 <h3>E-Shop</h3>
     
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
+                    <a href="#land"><li>Home</li></a>
+                    <a href="#about"><li>About</li></a>
+                    <a href="#services"><li>Services</li></a>
     
-                    <i id = "cart" class="fa-solid fa-cart-shopping"></i>
+                    <a href=""><i id = "cart" class="fa-solid fa-cart-shopping"></i></a>
     
                     <span class="toggle">
                         <span></span>
@@ -39,11 +39,11 @@
                 <nav>
                     <hr>
                     <span class="close">X</span>
-                    <a href="#">Products</a>
+                    <a href="#products">Products</a>
                     <hr>
-                    <a href="#">Categories</a>                
+                    <a href="#categories">Categories</a>                
                     <hr>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                     <hr>
                 </nav>
             </div>
@@ -68,7 +68,7 @@
    </div>
       
    <!-- Product Section Starts Here-->
-    <div class="products">
+    <div id="products" class="products">
         <div id ="P-container" class="container">
 
             <div class="spacial-title">
@@ -85,7 +85,7 @@
 
      <!-- Categories Section Starts Here-->
 
-     <div class="categories">
+     <div id="categories" class="categories">
         <div id ="C-container" class="container">
 
             <div class="spacial-title">
@@ -100,5 +100,113 @@
         </div>
     </div>
     <script src="./JS/index.js"></script>
+
+
+    <!-- Apout section starts here -->
+    <div id = "about" class="about">
+        <div id ="A-container" class="container">
+
+            <div class="texts">
+                <h2>About US</h2>
+                <div class="info">
+                    <p>E-Shop mission is to be Earth's most customer-centric company, Earth’s best employer, and Earth’s safest place to work. 
+                         is an online retailer, manufacturer of e-book readers, and Web services provider.</p>
+                    <h4>Free shipping on millions of items. Get the best of Shopping and Entertainment with Prime</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="services">
+        <div id ="S-container" class="container">
+
+            <div class="spacial-title">
+                <h2>Services</h2>
+            </div>               
+
+            <div class="card">
+
+                <div class="serv">
+                    <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="texts">
+                        <h2>Fast</h2>
+                        <p> Fast shipping at your fingertips. Enjoy prompt service ensuring your orders reach you in record time. </p>
+                    </div>
+                </div>
+
+                <div class="serv">
+                    <div class="icon"><i class="fa-solid fa-file-shield"></i></div>
+                    <div class="texts">
+                        <h2> Sequrity </h2>
+                        <p> E-Shop platform employs advanced encryption to safeguard your personal information.</p>
+                    </div>
+                </div>
+
+                <div class="serv">
+                    <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="texts">
+                        <h2> Globaly </h2>
+                        <p>Explore a global marketplace with our diverse range of products.  </p>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact section starts here -->
+    <div id = "contact" class="contact">
+        <div id ="S-container" class="container">
+
+            <div class="spacial-title">
+                <h2>Contact US</h2>
+            </div>             
+
+
+            <div class="card">
+                <div class="texts">
+                    <h2> GET IN TOUCH</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi repudiandae</p>
+    
+                    <div class="icon"> <i class="fa-regular fa-envelope"></i> mohamedmamdouh546@gmail.com</div>
+                    <div class="icon"> <i class="fa-solid fa-phone"></i> 01154939878</div>
+                    <div class="icon"> <i class="fa-solid fa-location-dot"></i>Cario-Helwan</div>
+                </div>
+    
+                <div class="form">
+                    <h2>SAY SOMETHING</h2>
+                    <form action="">
+                        <input class="main-input" type="text" name="name" placeholder="Your name">
+                        <input class="main-input" type="text" name="mail" placeholder="Your mail">
+                        <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
+    
+                        <button type="submit" name="Send your message">SEND</button>                        
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="texts">
+                <h1>E-Shop</h1> 
+                <p>Enhance your global shopping experience with our secure and swift worldwide shipping. Explore a diverse range of products from the comfort of your home.</p>            
+            </div>
+
+            <div class="coypri">
+                <p>Copyright © <span>E-Shop</span> 2024. All rights reserved by Mohamed Mamdouh</p>
+            </div>
+            
+            <div class="icons">
+                <a href="01154939878"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/mohamed-mamdouh-mohamed-sabry-4b5775219?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BA1zp6spySg%2BZmP7Q1EuYuQ%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/mohamed-mamdouh41199"><i class="fa-brands fa-github"></i></a>            
+            </div>
+        </div>
+    </div>
 </body>
 </html>
