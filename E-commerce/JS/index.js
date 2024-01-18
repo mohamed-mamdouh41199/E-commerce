@@ -88,10 +88,12 @@ cart_icon.onclick = function()
 /////////////////////////////////////
 ////// Create the Products
 ////////////////////////////////////
-let count = 6;
 
+// get random number from 0 to 13
+let r = Math.ceil(Math.random()*(10-1)+1)
+let count = r+6;
 
-for(let i = 0 ; i<count ; i++ )
+for(let i = r ; i<count ; i++ )
 {
   fetch(`https://fakestoreapi.com/products?limit=${count}`)
   .then((result) =>
@@ -144,9 +146,9 @@ for(let i = 0 ; i<count ; i++ )
   info_div.appendChild(title_)
   info_div.appendChild(category_)
   info_div.appendChild(apout_)
-  info_div.appendChild(price_)
-  info_div.appendChild(rate_)
-  info_div.appendChild(button)
+  // info_div.appendChild(price_)
+  // info_div.appendChild(rate_)
+  // info_div.appendChild(button)
   
 
   product_div.appendChild(img_div)
@@ -158,8 +160,12 @@ for(let i = 0 ; i<count ; i++ )
   })  
 }
 
-
+/////////////////////////////////////
+////// Create the Categories
+////////////////////////////////////
 img_src_arr = ['./assets/images/E.jpg' , './assets/images/J.jpg' , './assets/images/M.jpg' , './assets/images/W.jpg']
+html_srs_arr = ['./electronics.html' , './jew.html' , './men.html' , './women.html']
+
 for(let i = 0 ; i<4 ; i++ )
 {
   fetch(`https://fakestoreapi.com/products/categories`)
@@ -170,13 +176,15 @@ for(let i = 0 ; i<4 ; i++ )
   })
   .then((categories) =>
   {
-////// Create the els
+
+  ////// Create the els
   //////////////////
 
   let category_div = document.createElement("div")
   let img_div = document.createElement("div")
   let img = document.createElement("img")
   let text_div = document.createElement("div")
+  let anchor = document.createElement("a")
   let title_ = document.createElement("h3")
   
   
@@ -188,24 +196,35 @@ for(let i = 0 ; i<4 ; i++ )
   img_div.className = "img"
   text_div.className = "text"
   
-  
+  ////// Create attributes
+  //////////////////
+  // category_div.setAttribute("onclick" , `goto(${html_srs_arr[i]})`)
 
   // append src to img
   img.src = img_src_arr[i]
 
-  /// append img to div
+  // append page src 
+  anchor.href = html_srs_arr[i]
+
+  // append img to div
   img_div.appendChild(img)
+
+  // append anchor to category div
+  // category_div.appendChild(anchor)
+
 
   ////// Create text node and append it to els
   //////////////////
   
   title_.appendChild(document.createTextNode(categories[i].charAt(0).toUpperCase()+categories[i].slice(1)))
+
+  anchor.appendChild(title_)
   
 
   
   /////// append el to el 
   ///***************  
-  text_div.appendChild(title_)
+  text_div.appendChild(anchor)
   img_div.appendChild(text_div)
 
   
@@ -219,5 +238,7 @@ for(let i = 0 ; i<4 ; i++ )
   })  
 }
 
-
-
+function goto(src)
+{
+  console.log(src)
+}
