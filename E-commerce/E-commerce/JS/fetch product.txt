@@ -1,0 +1,25 @@
+fetch(`https://fakestoreapi.com/products?limit=${count}`)
+.then((result) =>
+{
+    // console.log(result)  //--> TO CHECK THE FETCH IS OK 
+    let mydata =  result.json();    
+    return mydata;
+})
+
+.then((products) =>
+{
+  // console.log(products)
+  for(let i = 0 ; i < count ; i++ )
+  {  
+    console.log("---------------------------------------");
+    console.log(`-----product ${i+1} details:------`);
+    console.log(products[i].id)
+    console.log(products[i].title)
+    console.log(products[i].price)
+    console.log(products[i].description)
+    console.log(products[i].category)
+    console.log(products[i].image)
+    console.log(products[i].rating["count"])
+    console.log(products[i].rating["rate"])
+  } 
+})

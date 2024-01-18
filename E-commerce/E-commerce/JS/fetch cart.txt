@@ -1,0 +1,20 @@
+
+
+fetch(`https://fakestoreapi.com/carts/3`)
+.then((result) =>
+{
+    // console.log(result)  //--> TO CHECK THE FETCH IS OK 
+    let mydata =  result.json();    
+    return mydata;
+})
+.then((cart) =>
+{
+  console.log("-----Cart:------");
+  console.log(cart)
+
+  console.log("-----Cart details:------");
+  console.log(cart.id)
+  console.log(cart.userId)
+  console.log(cart.date)
+  console.log(cart.products)
+})
