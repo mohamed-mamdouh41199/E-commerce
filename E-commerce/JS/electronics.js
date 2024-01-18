@@ -20,6 +20,17 @@ document.onkeyup = function (e)
   }
 };
 
+// scroller
+let el = document.querySelector(".scroller");
+
+ 
+window.addEventListener("scroll",() => {
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolltop = document.documentElement.scrollTop;
+    el.style.width = `${(scrolltop/height)*100}%`;
+    
+
+});
 
 /////////////////////////////////////
 ////// Catch the el

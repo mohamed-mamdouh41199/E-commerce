@@ -29,6 +29,19 @@ html
   scroll-behavior: smooth;
 }
 
+a,
+a h3
+{
+    text-decoration: none;
+    transition: var(--main-transition);    
+}
+
+a h3:hover
+{
+    color: white;
+    transform: scale(1.07);
+}
+
 
 /* special title */
 .spacial-title
@@ -83,6 +96,16 @@ html
     cursor:default;
 }
 
+.scroller
+{
+    background-color: var(--special-color);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    width: 0px;
+    height: 5px;    
+}
 
 /* --------------------------- */
 
